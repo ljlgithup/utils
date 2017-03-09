@@ -1,0 +1,6 @@
+//下载成功覆盖安装
+Intent intent = new Intent();
+intent.setAction("android.intent.action.VIEW");
+intent.addCategory("android.intent.category.DEFAULT");
+intent.setDataAndType(Uri.fromFile(file.result), "application/vnd.android.package-archive");
+startActivity(intent);
